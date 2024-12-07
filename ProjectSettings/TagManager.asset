@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Detectable
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -13,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Detectable
-  - 
+  - Environment
   - 
   - 
   - 
