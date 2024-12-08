@@ -14,8 +14,19 @@ public class DetectionTrigger : MonoBehaviour
     protected Ray lineOfSightRay;
     [SerializeField] protected bool somethingInTrigger;
     [SerializeField] protected bool hasLineOfSight;
-    // Start is called before the first frame update
 
+    [SerializeField] protected Tracker stealthTracker;
+
+    public delegate void PlayerDetected();
+    public static event PlayerDetected onPlayerDetected;
+
+    
+
+
+    protected void OnEnable()
+    {
+        DetectionTrigger.onPlayerDetected += onPlayerDetected;
+    }
     protected void DetectInTrigger()
     {
     
@@ -49,8 +60,37 @@ public class DetectionTrigger : MonoBehaviour
 
         }            
         }
+
+    
+    protected void OnTriggerExit(Collider other)
+    {
+        if(other = detectedObject)
+        {
+            somethingInTrigger = false;
+        }
+        
+    }
+
+    protected void PlayerBeenSpotted()
+    {
+            
+
+            detectedObject.transform.GetComponent<Rigidbody>().position = new Vector3(0, 0, 0);
+            if (onPlayerDetected != null)
+            {
+                if (somethingInTrigger == true)
+                {
+                    onPlayerDetected();
+                    somethingInTrigger = false;
+                }
+                
+            }
+            
+            
+    }
         
 
 
 }
 }
+

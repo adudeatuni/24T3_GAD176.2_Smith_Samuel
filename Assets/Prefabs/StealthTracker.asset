@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trackerName: Stealth Tracker
   trackerID: 1
-  chancesLeft: 0
+  chancesLeft: 3
   playerSpotted: 0

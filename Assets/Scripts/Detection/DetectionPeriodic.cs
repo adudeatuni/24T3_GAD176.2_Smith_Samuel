@@ -14,6 +14,7 @@ public class DetectionPeriodic : DetectionTrigger
         {
             Debug.Log("something found in the trigger of: " + transform.root.name);
             CheckLineOfSight();
+            PlayerBeenSpotted();
         }
     }
     
