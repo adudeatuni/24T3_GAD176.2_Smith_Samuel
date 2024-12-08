@@ -1,19 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using StealthFramework.Detection.Visual;
+using StealthFramework.Detection;
 
 public class DetectionPeriodic : DetectionTrigger
 {
     // Start is called before the first frame update
-    void Start()
+    void OnTriggerStay(Collider other)
     {
-        
+        detectedObject = other;
+        DetectInTrigger();
+        if (somethingInTrigger == true)
+        {
+            Debug.Log("something found in the trigger of: " + transform.root.name);
+            CheckLineOfSight();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
+
