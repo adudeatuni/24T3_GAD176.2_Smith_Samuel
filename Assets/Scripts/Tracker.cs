@@ -3,7 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using StealthFramework.Detection;
 
+
+
+namespace StealthFramework.Events
+{
 [CreateAssetMenu(fileName = "New Tracker", menuName = "Tracker/Create New Tracker")]
+
 public class Tracker : ScriptableObject
 {
     public string trackerName;
@@ -30,4 +35,5 @@ public class Tracker : ScriptableObject
             Debug.Log("PLAYER SPOTTED TO MANY TIMES!");
         }
     }
+}
 }
