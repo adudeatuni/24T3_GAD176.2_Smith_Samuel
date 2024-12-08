@@ -1,0 +1,14 @@
+* 1192707 (HEAD -> main, origin/main, origin/HEAD) no message
+*   deff117 Merge branch 'features/enemyBehaivours'
+|\  
+| * 5abbb26 (origin/features/enemyBehaivours, features/enemyBehaivours) Enemy Rotates to face player if they are within "audible distance" when player is seen, event is triggered
+| * 18c2f33 Begin work on two kinds of enemy/hostile prefabs. one that rotates to face the player if they are within a certain range, and another that periodically checks the area around them for the player
+* | 8dca59f Merge branch 'features/detection'
+|\| 
+| * 186e39b (origin/features/detection, features/detection) Reworked Detection script slightly so that it calls a seperate funtion to detect things, as opposed to everything running in the OnTriggerStay function. New script that inherits from initial DetectionTrigger Script, created some prefabs to make testing and tweaking easier
+| * 9620d8d reverting some changes made for testing
+| * c6a83f2 Detection system using a cone as a trigger volume, then uses raycast to see if the object is within line of sight with the "detector" object the vision cone is a child of
+* | 6b9c49e Added Asset Pack (Asset Unlock: 3D Prototyping Pack ||| https://assetstore.unity.com/packages/essentials/tutorial-projects/asset-unlock-3d-prototyping-pack-183069)
+|/  
+* 7d62a4d Basic Setup for testing
+* 24db25e Initial commit
